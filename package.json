@@ -1,7 +1,9 @@
 {
     "name": "gamesense-lua-helper",
     "displayName": "GameSense LUA helper",
-    "description": "Panorama js identifier and panorama.js + lua code sinppets.",
+	"description": "Panorama js identifier and panorama.js + lua code sinppets.",
+	"publisher": "jessy",
+	"repository": "https://github.com/jessy-lua/gamesense-lua-helper",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.40.0"
