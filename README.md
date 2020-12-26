@@ -1,7 +1,7 @@
 # gamesense-lua-helper README
 
 Add support to identifier of js code in panorama.loadstring of gamesense LUA api.
-Alos add panorama.js and gamesense lua code snippets
+As also this add panorama.js and gamesense lua code snippets
 
 ## Features
 ![feature 1](images/feature-1.png)
