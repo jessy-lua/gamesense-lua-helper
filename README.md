@@ -5,7 +5,7 @@ Alos add panorama.js and gamesense lua code snippets
 
 ## Features
 
-\!\[feature 1\]\(images/feature-1.png\)
+![feature 1](images/feature-1.png\)
 
 ## Release Notes
 
