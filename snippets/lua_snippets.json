@@ -1,0 +1,1306 @@
+{
+	"bit.arshift": {
+		"prefix": [
+			"bit.arshift",
+			"arshift"
+		],
+		"description": "Returns the bitwise arithmetic right-shift of its first argument by the number of bits given by the second argument.\nArithmetic right-shift treats the most-significant bit as a sign bit and replicates it.\nOnly the lower 5 bits of the shift count are used (reduces to the range [0..31]).",
+		"body": [
+			"bit.arshift(${1:x}, ${2:n})"
+		]
+	},
+	"bit.band": {
+		"prefix": [
+			"bit.band",
+			"band"
+		],
+		"description": "Returns the bitwise and of all of its arguments. Note that more than two arguments are allowed.",
+		"body": [
+			"bit.band(${1:x1}, ${2:[x2...]})"
+		]
+	},
+	"bit.bnot": {
+		"prefix": [
+			"bit.bnot",
+			"bnot"
+		],
+		"description": "Returns the bitwise not of its argument.",
+		"body": [
+			"bit.bnot(${1:x})"
+		]
+	},
+	"bit.bor": {
+		"prefix": [
+			"bit.bor",
+			"bor"
+		],
+		"description": "Returns the bitwise or of all of its arguments. Note that more than two arguments are allowed.",
+		"body": [
+			"bit.bor(${1:x1}, ${2:[x2...]})"
+		]
+	},
+	"bit.bswap": {
+		"prefix": [
+			"bit.bswap",
+			"bswap"
+		],
+		"description": "Swaps the bytes of its argument and returns it. This can be used to convert little-endian 32 bit numbers to big-endian 32 bit numbers or vice versa.",
+		"body": [
+			"bit.bswap(${1:x})"
+		]
+	},
+	"bit.bxor": {
+		"prefix": [
+			"bit.bxor",
+			"bxor"
+		],
+		"description": "Returns the bitwise xor of all of its arguments. Note that more than two arguments are allowed.",
+		"body": [
+			"bit.bxor(${1:x1}, ${2:[x2...]})"
+		]
+	},
+	"bit.lshift": {
+		"prefix": [
+			"bit.lshift",
+			"lshift"
+		],
+		"description": "Returns the bitwise logical left-shift of its first argument by the number of bits given by the second argument.\nLogical shifts treat the first argument as an unsigned number and shift in 0-bits.\nOnly the lower 5 bits of the shift count are used (reduces to the range [0..31]).",
+		"body": [
+			"bit.lshift(${1:x}, ${2:n})"
+		]
+	},
+	"bit.rol": {
+		"prefix": [
+			"bit.rol",
+			"rol"
+		],
+		"description": "Returns the bitwise left rotation of its first argument by the number of bits given by the second argument. Bits shifted out on one side are shifted back in on the other side.\nOnly the lower 5 bits of the rotate count are used (reduces to the range [0..31]).",
+		"body": [
+			"bit.rol(${1:x}, ${2:n})"
+		]
+	},
+	"bit.ror": {
+		"prefix": [
+			"bit.ror",
+			"ror"
+		],
+		"description": "Returns the bitwise right rotation of its first argument by the number of bits given by the second argument. Bits shifted out on one side are shifted back in on the other side.\nOnly the lower 5 bits of the rotate count are used (reduces to the range [0..31]).",
+		"body": [
+			"bit.ror(${1:x}, ${2:n})"
+		]
+	},
+	"bit.rshift": {
+		"prefix": [
+			"bit.rshift",
+			"rshift"
+		],
+		"description": "Returns the bitwise logical right-shift of its first argument by the number of bits given by the second argument.\nLogical shifts treat the first argument as an unsigned number and shift in 0-bits.\nOnly the lower 5 bits of the shift count are used (reduces to the range [0..31]).",
+		"body": [
+			"bit.rshift(${1:x}, ${2:n})"
+		]
+	},
+	"bit.tobit": {
+		"prefix": [
+			"bit.tobit",
+			"tobit"
+		],
+		"description": "Normalizes a number to the numeric range for bit operations and returns it. This function is usually not needed since all bit operations already normalize all of their input arguments.",
+		"body": [
+			"bit.tobit(${1:x})"
+		]
+	},
+	"bit.tohex": {
+		"prefix": [
+			"bit.tohex",
+			"tohex"
+		],
+		"description": "Converts its first argument to a hex string. The number of hex digits is given by the absolute value of the optional second argument. Positive numbers between 1 and 8 generate lowercase hex digits. Negative numbers generate uppercase hex digits. Only the least-significant 4*|n| bits are used. The default is to generate 8 lowercase hex digits.",
+		"body": [
+			"bit.tohex(${1:x}, ${2:n})"
+		]
+	},
+	"client.camera_angles": {
+		"prefix": [
+			"client.camera_angles",
+			"camera_angles"
+		],
+		"description": "Get or set camera angles",
+		"body": [
+			"client.camera_angles(${1:pitch}, ${2:yaw})"
+		]
+	},
+	"client.camera_position": {
+		"prefix": [
+			"client.camera_position",
+			"camera_position"
+		],
+		"description": "Returns x, y, z world coordinates of the game's camera position, or nil on failure.",
+		"body": [
+			"client.camera_position()"
+		]
+	},
+	"client.color_log": {
+		"prefix": [
+			"client.color_log",
+			"color_log"
+		],
+		"description": "Logs a colored message to console. End the string with \\0 to prevent it from adding a newline.",
+		"body": [
+			"client.color_log(${1:r}, ${2:g}, ${3:b}, ${4:msg}, ${5:...})"
+		]
+	},
+	"client.create_interface": {
+		"prefix": [
+			"client.create_interface",
+			"create_interface"
+		],
+		"description": "Returns a pointer to the interface, or nil on failure.",
+		"body": [
+			"client.create_interface(${1:module_name}, ${2:interface_name})"
+		]
+	},
+	"client.delay_call": {
+		"prefix": [
+			"client.delay_call",
+			"delay_call"
+		],
+		"description": "Executes the callback after delay seconds, passing the arguments to it.",
+		"body": [
+			"client.delay_call(${1:delay}, ${2:callback}, ${3:...})"
+		]
+	},
+	"client.draw_debug_text": {
+		"prefix": [
+			"client.draw_debug_text",
+			"draw_debug_text"
+		],
+		"description": "Avoid calling this during the paint event.",
+		"body": [
+			"client.draw_debug_text(${1:x}, ${2:y}, ${3:z}, ${4:line_offset}, ${5:duration}, ${6:r}, ${7:g}, ${8:b}, ${9:a}, ${10:...})"
+		]
+	},
+	"client.draw_hitboxes": {
+		"prefix": [
+			"client.draw_hitboxes",
+			"draw_hitboxes"
+		],
+		"description": "Draws hitbox overlays. Avoid calling this during the paint event.",
+		"body": [
+			"client.draw_hitboxes(${1:entindex}, ${2:duration}, ${3:hitboxes}, ${4:r}, ${5:g}, ${6:b}, ${7:a}, ${8:tick})"
+		]
+	},
+	"client.error_log": {
+		"prefix": [
+			"client.error_log",
+			"error_log"
+		],
+		"description": "Logs a message to console in the error format and plays the sound (If Hide from OBS is disabled)",
+		"body": [
+			"client.error_log(${1:msg}, ${2:...})"
+		]
+	},
+	"client.exec": {
+		"prefix": [
+			"client.exec",
+			"exec"
+		],
+		"description": "Executes a console command. Multiple commands can be combined with ';'. Be careful when passing user input (including usernames) to it.",
+		"body": [
+			"client.exec(${1:cmd}, ${2:...})"
+		]
+	},
+	"client.eye_position": {
+		"prefix": [
+			"client.eye_position",
+			"eye_position"
+		],
+		"description": "Returns x, y, z world coordinates of the local player's eye position, or nil on failure.",
+		"body": [
+			"client.eye_position()"
+		]
+	},
+	"client.find_signature": {
+		"prefix": [
+			"client.find_signature",
+			"find_signature"
+		],
+		"description": "Finds the specified pattern and returns a pointer to it, or nil if not found.",
+		"body": [
+			"client.find_signature(${1:module_name}, ${2:pattern})"
+		]
+	},
+	"client.key_state": {
+		"prefix": [
+			"client.key_state",
+			"key_state"
+		],
+		"description": "Returns true if the key is pressed, or nil on failure",
+		"body": [
+			"client.key_state(${1:key})"
+		]
+	},
+	"client.latency": {
+		"prefix": [
+			"client.latency",
+			"latency"
+		],
+		"description": "Returns your latency in seconds.",
+		"body": [
+			"client.latency()"
+		]
+	},
+	"client.log": {
+		"prefix": [
+			"client.log",
+			"log"
+		],
+		"description": "Logs a message to console in the [gamesense] format.",
+		"body": [
+			"client.log(${1:msg}, ${2:...})"
+		]
+	},
+	"client.random_float": {
+		"prefix": [
+			"client.random_float",
+			"random_float"
+		],
+		"description": "Returns a random float between minimum and maximum.",
+		"body": [
+			"client.random_float(${1:minimum}, ${2:maximum})"
+		]
+	},
+	"client.random_int": {
+		"prefix": [
+			"client.random_int",
+			"random_int"
+		],
+		"description": "Returns a random integer between minimum and maximum.",
+		"body": [
+			"client.random_int(${1:minimum}, ${2:maximum})"
+		]
+	},
+	"client.reload_active_scripts": {
+		"prefix": [
+			"client.reload_active_scripts",
+			"reload_active_scripts"
+		],
+		"description": "Reloads all scripts the following frame.",
+		"body": [
+			"client.reload_active_scripts()"
+		]
+	},
+	"client.scale_damage": {
+		"prefix": [
+			"client.scale_damage",
+			"scale_damage"
+		],
+		"description": "Returns adjusted damage for the specified hitgroup",
+		"body": [
+			"client.scale_damage(${1:entindex}, ${2:hitgroup}, ${3:damage})"
+		]
+	},
+	"client.screen_size": {
+		"prefix": [
+			"client.screen_size",
+			"screen_size"
+		],
+		"description": "Returns (width, height).",
+		"body": [
+			"client.screen_size()"
+		]
+	},
+	"client.set_clan_tag": {
+		"prefix": [
+			"client.set_clan_tag",
+			"set_clan_tag"
+		],
+		"description": "The clan tag is removed if no argument is passed or if it is an empty string. Additional arguments will be concatenated similar to client.log.",
+		"body": [
+			"client.set_clan_tag(${1:...})"
+		]
+	},
+	"client.set_event_callback": {
+		"prefix": [
+			"client.set_event_callback",
+			"set_event_callback"
+		],
+		"description": "Raises an error and prints a message in console upon failure.",
+		"body": [
+			"client.set_event_callback(${1:event_name}, ${2:callback})"
+		]
+	},
+	"client.system_time": {
+		"prefix": [
+			"client.system_time",
+			"system_time"
+		],
+		"description": "Returns windows time as (hours, minutes, seconds, milliseconds)",
+		"body": [
+			"client.system_time()"
+		]
+	},
+	"client.timestamp": {
+		"prefix": [
+			"client.timestamp",
+			"timestamp"
+		],
+		"description": "Returns high precision timestamp in milliseconds.",
+		"body": [
+			"client.timestamp()"
+		]
+	},
+	"client.trace_bullet": {
+		"prefix": [
+			"client.trace_bullet",
+			"trace_bullet"
+		],
+		"description": "Returns entindex, damage. Entindex is nil when no player is hit.",
+		"body": [
+			"client.trace_bullet(${1:from_player}, ${2:from_x}, ${3:from_y}, ${4:from_z}, ${5:to_x}, ${6:to_y}, ${7:to_z}, ${8:skip_players})"
+		]
+	},
+	"client.trace_line": {
+		"prefix": [
+			"client.trace_line",
+			"trace_line"
+		],
+		"description": "Returns fraction, entindex. fraction is a percentage in the range [0.0, 1.0] that tells you how far the trace went before hitting something, so 1.0 means nothing was hit. entindex is the entity index that hit, or -1 if no entity was hit.",
+		"body": [
+			"client.trace_line(${1:skip_entindex}, ${2:from_x}, ${3:from_y}, ${4:from_z}, ${5:to_x}, ${6:to_y}, ${7:to_z})"
+		]
+	},
+	"client.unix_time": {
+		"prefix": [
+			"client.unix_time",
+			"unix_time"
+		],
+		"description": "Returns current windows time as [unix time / epoch time](https://en.wikipedia.org/wiki/Unix_time) (seconds since 1 January 1970 00:00:00)",
+		"body": [
+			"client.unix_time()"
+		]
+	},
+	"client.unset_event_callback": {
+		"prefix": [
+			"client.unset_event_callback",
+			"unset_event_callback"
+		],
+		"description": "Removes the event callback for the passed event name and function. Raises an error and prints a message in console upon failure.",
+		"body": [
+			"client.unset_event_callback(${1:event_name}, ${2:callback})"
+		]
+	},
+	"client.update_player_list": {
+		"prefix": [
+			"client.update_player_list",
+			"update_player_list"
+		],
+		"description": "Updates the player list tab without having to open it.",
+		"body": [
+			"client.update_player_list()"
+		]
+	},
+	"client.userid_to_entindex": {
+		"prefix": [
+			"client.userid_to_entindex",
+			"userid_to_entindex"
+		],
+		"description": "Returns the entity index, or 0 on failure.",
+		"body": [
+			"client.userid_to_entindex(${1:userid})"
+		]
+	},
+	"client.visible": {
+		"prefix": [
+			"client.visible",
+			"visible"
+		],
+		"description": "Returns true if the position is visible. For example, you could use a player's origin to see if they are visible.",
+		"body": [
+			"client.visible(${1:x}, ${2:y}, ${3:z})"
+		]
+	},
+	"config.load": {
+		"prefix": [
+			"config.load",
+			"load"
+		],
+		"description": "Loads a configuration preset.",
+		"body": [
+			"config.load(${1:name})"
+		]
+	},
+	"database.read": {
+		"prefix": [
+			"database.read",
+			"read"
+		],
+		"description": "Gets a value from the database",
+		"body": [
+			"database.read(${1:key_name})"
+		]
+	},
+	"database.write": {
+		"prefix": [
+			"database.write",
+			"write"
+		],
+		"description": "Writes a value to the database. Avoid calling this often. For example, call read at script load, then call write during the 'shutdown' event",
+		"body": [
+			"database.write(${1:key_name}, ${2:value})"
+		]
+	},
+	"entity.get_all": {
+		"prefix": [
+			"entity.get_all",
+			"get_all"
+		],
+		"description": "Returns an array of entity indices. Pass no arguments for all entities.",
+		"body": [
+			"entity.get_all(${1:classname})"
+		]
+	},
+	"entity.get_bounding_box": {
+		"prefix": [
+			"entity.get_bounding_box",
+			"get_bounding_box"
+		],
+		"description": "Returns x1, y1, x2, y2, alpha_multiplier. The contents of x1, y1, x2, y2 must be ignored when alpha_multiplier is zero, which indicates that the bounding box is invalid and should not be drawn.",
+		"body": [
+			"entity.get_bounding_box(${1:player})"
+		]
+	},
+	"entity.get_classname": {
+		"prefix": [
+			"entity.get_classname",
+			"get_classname"
+		],
+		"description": "Returns the name of the entity's class, or nil on failure.",
+		"body": [
+			"entity.get_classname(${1:ent})"
+		]
+	},
+	"entity.get_game_rules": {
+		"prefix": [
+			"entity.get_game_rules",
+			"get_game_rules"
+		],
+		"description": "Returns entity index of CCSGameRulesProxy instance, or nil if none exists.",
+		"body": [
+			"entity.get_game_rules()"
+		]
+	},
+	"entity.get_local_player": {
+		"prefix": [
+			"entity.get_local_player",
+			"get_local_player"
+		],
+		"description": "Returns the entity index for the local player, or nil on failure.",
+		"body": [
+			"entity.get_local_player()"
+		]
+	},
+	"entity.get_origin": {
+		"prefix": [
+			"entity.get_origin",
+			"get_origin"
+		],
+		"description": "Returns the x, y, z coordinates of the entity. Only works for non-dormant entities, except for players, where it will return the dormant esp origin",
+		"body": [
+			"entity.get_origin(${1:ent})"
+		]
+	},
+	"entity.get_player_name": {
+		"prefix": [
+			"entity.get_player_name",
+			"get_player_name"
+		],
+		"description": "Returns the player's name, or the string \"unknown\" on failure.",
+		"body": [
+			"entity.get_player_name(${1:ent})"
+		]
+	},
+	"entity.get_player_resource": {
+		"prefix": [
+			"entity.get_player_resource",
+			"get_player_resource"
+		],
+		"description": "Returns entity index of CCSPlayerResource instance, or nil if none exists.",
+		"body": [
+			"entity.get_player_resource()"
+		]
+	},
+	"entity.get_player_weapon": {
+		"prefix": [
+			"entity.get_player_weapon",
+			"get_player_weapon"
+		],
+		"description": "Returns the entity index of the player's active weapon, or nil if the player is not alive, dormant, etc.",
+		"body": [
+			"entity.get_player_weapon(${1:ent})"
+		]
+	},
+	"entity.get_players": {
+		"prefix": [
+			"entity.get_players",
+			"get_players"
+		],
+		"description": "Returns an array of player entity indices. Dormant and dead players will not be added to the list.",
+		"body": [
+			"entity.get_players(${1:enemies_only})"
+		]
+	},
+	"entity.get_prop": {
+		"prefix": [
+			"entity.get_prop",
+			"get_prop"
+		],
+		"description": "Returns the value of the property, or nil on failure. For vectors or angles, this returns three values.",
+		"body": [
+			"entity.get_prop(${1:ent}, ${2:propname}, ${3:array_index})"
+		]
+	},
+	"entity.get_steam64": {
+		"prefix": [
+			"entity.get_steam64",
+			"get_steam64"
+		],
+		"description": "Returns steamID3, or nil on failure.",
+		"body": [
+			"entity.get_steam64(${1:player})"
+		]
+	},
+	"entity.hitbox_position": {
+		"prefix": [
+			"entity.hitbox_position",
+			"hitbox_position"
+		],
+		"description": "Returns world coordinates x, y, z, or nil on failure.",
+		"body": [
+			"entity.hitbox_position(${1:player}, ${2:hitbox})"
+		]
+	},
+	"entity.is_alive": {
+		"prefix": [
+			"entity.is_alive",
+			"is_alive"
+		],
+		"description": "Returns true if the player is not dead.",
+		"body": [
+			"entity.is_alive(${1:ent})"
+		]
+	},
+	"entity.is_dormant": {
+		"prefix": [
+			"entity.is_dormant",
+			"is_dormant"
+		],
+		"description": "Returns true if the entity is dormant.",
+		"body": [
+			"entity.is_dormant(${1:ent})"
+		]
+	},
+	"entity.is_enemy": {
+		"prefix": [
+			"entity.is_enemy",
+			"is_enemy"
+		],
+		"description": "Returns true if the entity is on the other team.",
+		"body": [
+			"entity.is_enemy(${1:ent})"
+		]
+	},
+	"entity.set_prop": {
+		"prefix": [
+			"entity.set_prop",
+			"set_prop"
+		],
+		"description": "Sets the value of the property. For vectors or angles, pass three values.",
+		"body": [
+			"entity.set_prop(${1:ent}, ${2:propname}, ${3:value}, ${4:array_index})"
+		]
+	},
+	"globals.absoluteframetime": {
+		"prefix": [
+			"globals.absoluteframetime",
+			"absoluteframetime"
+		],
+		"description": "Returns the number of seconds elapsed during the last game frame.",
+		"body": [
+			"globals.absoluteframetime()"
+		]
+	},
+	"globals.chokedcommands": {
+		"prefix": [
+			"globals.chokedcommands",
+			"chokedcommands"
+		],
+		"description": "Returns the current number of commands that are being held back.",
+		"body": [
+			"globals.chokedcommands()"
+		]
+	},
+	"globals.commandack": {
+		"prefix": [
+			"globals.commandack",
+			"commandack"
+		],
+		"description": "Returns the number of the command the server last acknowledged.",
+		"body": [
+			"globals.commandack()"
+		]
+	},
+	"globals.curtime": {
+		"prefix": [
+			"globals.curtime",
+			"curtime"
+		],
+		"description": "Returns the game time in seconds. This number is synchronized with the server.",
+		"body": [
+			"globals.curtime()"
+		]
+	},
+	"globals.framecount": {
+		"prefix": [
+			"globals.framecount",
+			"framecount"
+		],
+		"description": "Returns the number of frames since the game started",
+		"body": [
+			"globals.framecount()"
+		]
+	},
+	"globals.frametime": {
+		"prefix": [
+			"globals.frametime",
+			"frametime"
+		],
+		"description": "Returns the number of seconds elapsed during the last game frame.",
+		"body": [
+			"globals.frametime()"
+		]
+	},
+	"globals.lastoutgoingcommand": {
+		"prefix": [
+			"globals.lastoutgoingcommand",
+			"lastoutgoingcommand"
+		],
+		"description": "Returns the command number of the last outgoing command.",
+		"body": [
+			"globals.lastoutgoingcommand()"
+		]
+	},
+	"globals.mapname": {
+		"prefix": [
+			"globals.mapname",
+			"mapname"
+		],
+		"description": "Returns the name of the loaded map, or nil if you are not in game.",
+		"body": [
+			"globals.mapname()"
+		]
+	},
+	"globals.maxplayers": {
+		"prefix": [
+			"globals.maxplayers",
+			"maxplayers"
+		],
+		"description": "Returns the maximum number of players in the server.",
+		"body": [
+			"globals.maxplayers()"
+		]
+	},
+	"globals.oldcommandack": {
+		"prefix": [
+			"globals.oldcommandack",
+			"oldcommandack"
+		],
+		"description": "Returns the previous server acknowledged command number.",
+		"body": [
+			"globals.oldcommandack()"
+		]
+	},
+	"globals.realtime": {
+		"prefix": [
+			"globals.realtime",
+			"realtime"
+		],
+		"description": "Returns the local time in seconds.",
+		"body": [
+			"globals.realtime()"
+		]
+	},
+	"globals.tickcount": {
+		"prefix": [
+			"globals.tickcount",
+			"tickcount"
+		],
+		"description": "Returns the number of ticks elapsed in the server.",
+		"body": [
+			"globals.tickcount()"
+		]
+	},
+	"globals.tickinterval": {
+		"prefix": [
+			"globals.tickinterval",
+			"tickinterval"
+		],
+		"description": "Returns the time elapsed in one game tick in seconds.",
+		"body": [
+			"globals.tickinterval()"
+		]
+	},
+	"materialsystem.alpha_modulate": {
+		"prefix": [
+			"materialsystem.alpha_modulate",
+			"alpha_modulate"
+		],
+		"description": "Overrides the alpha of the material object it's called on. Doesn't work with some materials",
+		"body": [
+			"materialsystem.alpha_modulate(${1:a})"
+		]
+	},
+	"materialsystem.arms_material": {
+		"prefix": [
+			"materialsystem.arms_material",
+			"arms_material"
+		],
+		"description": "Returns the players hand cham material as an object.",
+		"body": [
+			"materialsystem.arms_material()"
+		]
+	},
+	"materialsystem.chams_material": {
+		"prefix": [
+			"materialsystem.chams_material",
+			"chams_material"
+		],
+		"description": "Returns the players cham material as an object.",
+		"body": [
+			"materialsystem.chams_material()"
+		]
+	},
+	"materialsystem.color_modulate": {
+		"prefix": [
+			"materialsystem.color_modulate",
+			"color_modulate"
+		],
+		"description": "Overrides the color of the material object it's called on. Doesn't work with some materials",
+		"body": [
+			"materialsystem.color_modulate(${1:r}, ${2:g}, ${3:b})"
+		]
+	},
+	"materialsystem.find_material": {
+		"prefix": [
+			"materialsystem.find_material",
+			"find_material"
+		],
+		"description": "Returns a material object for the specified material.",
+		"body": [
+			"materialsystem.find_material(${1:material})"
+		]
+	},
+	"materialsystem.find_materials": {
+		"prefix": [
+			"materialsystem.find_materials",
+			"find_materials"
+		],
+		"description": "Returns all material objects that contain the specified material.",
+		"body": [
+			"materialsystem.find_materials(${1:materials})"
+		]
+	},
+	"materialsystem.find_texture": {
+		"prefix": [
+			"materialsystem.find_texture",
+			"find_texture"
+		],
+		"description": "Returns a texture object for the specified material.",
+		"body": [
+			"materialsystem.find_texture(${1:material})"
+		]
+	},
+	"materialsystem.get_material_var_flag": {
+		"prefix": [
+			"materialsystem.get_material_var_flag",
+			"get_material_var_flag"
+		],
+		"description": "Returns the boolean value of the material var flag",
+		"body": [
+			"materialsystem.get_material_var_flag(${1:material_var_flag})"
+		]
+	},
+	"materialsystem.get_model_materials": {
+		"prefix": [
+			"materialsystem.get_model_materials",
+			"get_model_materials"
+		],
+		"description": "Returns all material objects for a specified entity.",
+		"body": [
+			"materialsystem.get_model_materials(${1:ent})"
+		]
+	},
+	"materialsystem.get_shader_param": {
+		"prefix": [
+			"materialsystem.get_shader_param",
+			"get_shader_param"
+		],
+		"description": "Returns the value of the shader param or nil",
+		"body": [
+			"materialsystem.get_shader_param(${1:shader_param})"
+		]
+	},
+	"materialsystem.override_material": {
+		"prefix": [
+			"materialsystem.override_material",
+			"override_material"
+		],
+		"description": "Overrides all of a material properties with another material.",
+		"body": [
+			"materialsystem.override_material(${1:ent})"
+		]
+	},
+	"materialsystem.reload": {
+		"prefix": [
+			"materialsystem.reload",
+			"reload"
+		],
+		"description": "Restores the original material properties of the material it's called on.",
+		"body": [
+			"materialsystem.reload()"
+		]
+	},
+	"materialsystem.set_material_var_flag": {
+		"prefix": [
+			"materialsystem.set_material_var_flag",
+			"set_material_var_flag"
+		],
+		"description": "Sets the value of the material var flag of the material",
+		"body": [
+			"materialsystem.set_material_var_flag(${1:material_var_flag}, ${2:value})"
+		]
+	},
+	"materialsystem.set_shader_param": {
+		"prefix": [
+			"materialsystem.set_shader_param",
+			"set_shader_param"
+		],
+		"description": "Sets the value of the shader param of the material",
+		"body": [
+			"materialsystem.set_shader_param(${1:shader_param}, ${2:value})"
+		]
+	},
+	"renderer.circle": {
+		"prefix": [
+			"renderer.circle",
+			"circle"
+		],
+		"description": "This can only be called from the paint callback.",
+		"body": [
+			"renderer.circle(${1:x}, ${2:y}, ${3:r}, ${4:g}, ${5:b}, ${6:a}, ${7:radius}, ${8:start_degrees}, ${9:percentage})"
+		]
+	},
+	"renderer.circle_outline": {
+		"prefix": [
+			"renderer.circle_outline",
+			"circle_outline"
+		],
+		"description": "This can only be called from the paint callback.",
+		"body": [
+			"renderer.circle_outline(${1:x}, ${2:y}, ${3:r}, ${4:g}, ${5:b}, ${6:a}, ${7:radius}, ${8:start_degrees}, ${9:percentage}, ${10:thickness})"
+		]
+	},
+	"renderer.gradient": {
+		"prefix": [
+			"renderer.gradient",
+			"gradient"
+		],
+		"description": "This can only be called from the paint callback.",
+		"body": [
+			"renderer.gradient(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:r1}, ${6:g1}, ${7:b1}, ${8:a1}, ${9:r2}, ${10:g2}, ${11:b2}, ${12:a2}, ${13:ltr})"
+		]
+	},
+	"renderer.indicator": {
+		"prefix": [
+			"renderer.indicator",
+			"indicator"
+		],
+		"description": "Returns the Y screen coordinate (vertical offset) of the drawn text, or nil on failure. This can only be called from the paint callback.",
+		"body": [
+			"renderer.indicator(${1:r}, ${2:g}, ${3:b}, ${4:a}, ${5:...})"
+		]
+	},
+	"renderer.line": {
+		"prefix": [
+			"renderer.line",
+			"line"
+		],
+		"description": "This can only be called from the paint callback.",
+		"body": [
+			"renderer.line(${1:xa}, ${2:ya}, ${3:xb}, ${4:yb}, ${5:r}, ${6:g}, ${7:b}, ${8:a})"
+		]
+	},
+	"renderer.load_jpg": {
+		"prefix": [
+			"renderer.load_jpg",
+			"load_jpg"
+		],
+		"description": "Loads a texture from raw JPG contents (with file header). Returns a texture ID that can be used with renderer.texture, or nil on failure",
+		"body": [
+			"renderer.load_jpg(${1:contents}, ${2:width}, ${3:height})"
+		]
+	},
+	"renderer.load_png": {
+		"prefix": [
+			"renderer.load_png",
+			"load_png"
+		],
+		"description": "Loads a texture from raw png contents (with file header). Returns a texture ID that can be used with renderer.texture, or nil on failure",
+		"body": [
+			"renderer.load_png(${1:contents}, ${2:width}, ${3:height})"
+		]
+	},
+	"renderer.load_rgba": {
+		"prefix": [
+			"renderer.load_rgba",
+			"load_rgba"
+		],
+		"description": "Loads a texture from a RGBA buffer. Returns a texture ID that can be used with renderer.texture, or nil on failure",
+		"body": [
+			"renderer.load_rgba(${1:contents}, ${2:width}, ${3:height})"
+		]
+	},
+	"renderer.load_svg": {
+		"prefix": [
+			"renderer.load_svg",
+			"load_svg"
+		],
+		"description": "Returns a texture ID that can be used with renderer.texture, or nil on failure",
+		"body": [
+			"renderer.load_svg(${1:contents}, ${2:width}, ${3:height})"
+		]
+	},
+	"renderer.measure_text": {
+		"prefix": [
+			"renderer.measure_text",
+			"measure_text"
+		],
+		"description": "Returns width, height. This can only be called from the paint callback.",
+		"body": [
+			"renderer.measure_text(${1:flags}, ${2:...})"
+		]
+	},
+	"renderer.rectangle": {
+		"prefix": [
+			"renderer.rectangle",
+			"rectangle"
+		],
+		"description": "This can only be called from the paint callback.",
+		"body": [
+			"renderer.rectangle(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:r}, ${6:g}, ${7:b}, ${8:a})"
+		]
+	},
+	"renderer.text": {
+		"prefix": [
+			"renderer.text",
+			"text"
+		],
+		"description": "This can only be called from the paint callback.",
+		"body": [
+			"renderer.text(${1:x}, ${2:y}, ${3:r}, ${4:g}, ${5:b}, ${6:a}, ${7:flags}, ${8:max_width}, ${9:...})"
+		]
+	},
+	"renderer.texture": {
+		"prefix": [
+			"renderer.texture",
+			"texture"
+		],
+		"description": "Draws a texture from the texture id created from load_rgba, load_png, load_jpg or load_svg",
+		"body": [
+			"renderer.texture(${1:id}, ${2:x}, ${3:y}, ${4:w}, ${5:h}, ${6:r}, ${7:g}, ${8:b}, ${9:a}, ${10:flags})"
+		]
+	},
+	"renderer.triangle": {
+		"prefix": [
+			"renderer.triangle",
+			"triangle"
+		],
+		"description": "This can only be called from the paint callback.",
+		"body": [
+			"renderer.triangle(${1:x0}, ${2:y0}, ${3:x1}, ${4:y1}, ${5:x2}, ${6:y2}, ${7:r}, ${8:g}, ${9:b}, ${10:a})"
+		]
+	},
+	"renderer.world_to_screen": {
+		"prefix": [
+			"renderer.world_to_screen",
+			"world_to_screen"
+		],
+		"description": "Returns two screen coordinates (x, y), or nil if the world position is not visible on your screen. This can only be called from the paint callback.",
+		"body": [
+			"renderer.world_to_screen(${1:x}, ${2:y}, ${3:z})"
+		]
+	},
+	"ui.get": {
+		"prefix": [
+			"ui.get",
+			"get"
+		],
+		"description": "For a checkbox, returns true or false. For a slider, returns an integer. For a combobox, returns a string. For a multiselect combobox, returns an array of strings. For a hotkey, returns true if the hotkey is active. For a color picker, returns r, g, b, a. Throws an error on failure.",
+		"body": [
+			"ui.get(${1:item})"
+		]
+	},
+	"ui.is_menu_open": {
+		"prefix": [
+			"ui.is_menu_open",
+			"is_menu_open"
+		],
+		"description": "Returns true if the menu is currently open.",
+		"body": [
+			"ui.is_menu_open()"
+		]
+	},
+	"ui.menu_position": {
+		"prefix": [
+			"ui.menu_position",
+			"menu_position"
+		],
+		"description": "Returns the x, y of the menu, even when closed.",
+		"body": [
+			"ui.menu_position()"
+		]
+	},
+	"ui.menu_size": {
+		"prefix": [
+			"ui.menu_size",
+			"menu_size"
+		],
+		"description": "Returns the width, height of the menu, even when closed.",
+		"body": [
+			"ui.menu_size()"
+		]
+	},
+	"ui.mouse_position": {
+		"prefix": [
+			"ui.mouse_position",
+			"mouse_position"
+		],
+		"description": "Returns current mouse coordinates x, y",
+		"body": [
+			"ui.mouse_position()"
+		]
+	},
+	"ui.name": {
+		"prefix": [
+			"ui.name",
+			"name"
+		],
+		"description": "Returns the name of the menu item reference passed to it. Throws an error on failure.",
+		"body": [
+			"ui.name(${1:item})"
+		]
+	},
+	"ui.new_button": {
+		"prefix": [
+			"ui.new_button",
+			"new_button"
+		],
+		"description": "Throws an error on failure. The return value should not be used with ui.set or ui.get.",
+		"body": [
+			"ui.new_button(${1:tab}, ${2:container}, ${3:name}, ${4:callback})"
+		]
+	},
+	"ui.new_checkbox": {
+		"prefix": [
+			"ui.new_checkbox",
+			"new_checkbox"
+		],
+		"description": "Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+		"body": [
+			"ui.new_checkbox(${1:tab}, ${2:container}, ${3:name})"
+		]
+	},
+	"ui.new_color_picker": {
+		"prefix": [
+			"ui.new_color_picker",
+			"new_color_picker"
+		],
+		"description": "Throws an error on failure. The color picker is placed to the right of the previous menu item.",
+		"body": [
+			"ui.new_color_picker(${1:tab}, ${2:container}, ${3:name}, ${4:r}, ${5:g}, ${6:b}, ${7:a})"
+		]
+	},
+	"ui.new_combobox": {
+		"prefix": [
+			"ui.new_combobox",
+			"new_combobox"
+		],
+		"description": "Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+		"body": [
+			"ui.new_combobox(${1:tab}, ${2:container}, ${3:name}, ${4:...})"
+		]
+	},
+	"ui.new_hotkey": {
+		"prefix": [
+			"ui.new_hotkey",
+			"new_hotkey"
+		],
+		"description": "Returns a special value that can be passed to ui.get to see if the hotkey is pressed, or throws an error on failure.",
+		"body": [
+			"ui.new_hotkey(${1:tab}, ${2:container}, ${3:name}, ${4:inline})"
+		]
+	},
+	"ui.new_label": {
+		"prefix": [
+			"ui.new_label",
+			"new_label"
+		],
+		"description": "Creates a new label, this can be used to make otherwise attached menu items standalone or have interactive menus. Returns a special value that can be passed to ui.set, or throws an error on failure.",
+		"body": [
+			"ui.new_label(${1:tab}, ${2:container}, ${3:name})"
+		]
+	},
+	"ui.new_listbox": {
+		"prefix": [
+			"ui.new_listbox",
+			"new_listbox"
+		],
+		"description": "Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+		"body": [
+			"ui.new_listbox(${1:tab}, ${2:container}, ${3:name}, ${4:...})"
+		]
+	},
+	"ui.new_multiselect": {
+		"prefix": [
+			"ui.new_multiselect",
+			"new_multiselect"
+		],
+		"description": "Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+		"body": [
+			"ui.new_multiselect(${1:tab}, ${2:container}, ${3:name}, ${4:...})"
+		]
+	},
+	"ui.new_slider": {
+		"prefix": [
+			"ui.new_slider",
+			"new_slider"
+		],
+		"description": "Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+		"body": [
+			"ui.new_slider(${1:tab}, ${2:container}, ${3:name}, ${4:min}, ${5:max}, ${6:init_value}, ${7:show_tooltip}, ${8:unit}, ${9:scale}, ${10:tooltips})"
+		]
+	},
+	"ui.new_string": {
+		"prefix": [
+			"ui.new_string",
+			"new_string"
+		],
+		"description": "Creates a string UI element, can be used to store arbitrary strings in configs. No menu item is created but it has the same semantics as other ui.new_* functions. Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+		"body": [
+			"ui.new_string(${1:name}, ${2:default_value})"
+		]
+	},
+	"ui.new_textbox": {
+		"prefix": [
+			"ui.new_textbox",
+			"new_textbox"
+		],
+		"description": "Throws an error on failure. Returns a special value that can be used with ui.get",
+		"body": [
+			"ui.new_textbox(${1:tab}, ${2:container}, ${3:name})"
+		]
+	},
+	"ui.reference": {
+		"prefix": [
+			"ui.reference",
+			"reference"
+		],
+		"description": "Avoid calling this from inside a function. Returns a reference that can be passed to ui.get and ui.set, or throws an error on failure. This allows you to access a built-in pre-existing menu items. This function returns multiple values when the specified menu item is followed by unnamed menu items, for example a color picker or a hotkey.",
+		"body": [
+			"ui.reference(${1:tab}, ${2:container}, ${3:name})"
+		]
+	},
+	"ui.set": {
+		"prefix": [
+			"ui.set",
+			"set"
+		],
+		"description": "For checkboxes, pass true or false. For a slider, pass a number that is within the slider's minimum/maximum values. For a combobox, pass a string value. For a multiselect combobox, pass zero or more strings. For referenced buttons, param is ignored and the button's callback is invoked. For color pickers, pass the arguments r, g, b, a.",
+		"body": [
+			"ui.set(${1:item}, ${2:value}, ${3:...})"
+		]
+	},
+	"ui.set_callback": {
+		"prefix": [
+			"ui.set_callback",
+			"set_callback"
+		],
+		"description": "Sets the change callback of a custom menu item. It will be executed on change and passed the reference",
+		"body": [
+			"ui.set_callback(${1:item}, ${2:callback})"
+		]
+	},
+	"ui.set_visible": {
+		"prefix": [
+			"ui.set_visible",
+			"set_visible"
+		],
+		"description": "Sets the visibility of the menu item",
+		"body": [
+			"ui.set_visible(${1:item}, ${2:visible})"
+		]
+	},
+	"writefile": {
+		"prefix": "writefile",
+		"description": "Writes a value to the file with name.",
+		"body": [
+			"writefile(${1:filename}, ${2:value})"
+		]
+	},
+	"readfile": {
+		"prefix": "readfile",
+		"description": "Read and return data from selected file.",
+		"body": [
+			"readfile(${1:filename})"
+		]
+	},
+	"json.stringify": {
+		"prefix": [
+			"json.stringify",
+			"stringify"
+		],
+		"description": "Will serialise a Lua value into a string containing the JSON representation.",
+		"body": [
+			"json.stringify(${1:data})"
+		]
+	},
+	"json.parse": {
+		"prefix": [
+			"json.parse",
+			"parse"
+		],
+		"description": "Will deserialise any UTF-8 JSON string into a Lua value or table.",
+		"body": [
+			"json.parse(${1:json_text})"
+		]
+	},
+	"panorama.open": {
+		"prefix": [
+			"panorama.open",
+			"open"
+		],
+		"description": "Returns a JS context table that lets you call vanilla JS and panorama functions. Avoid calling this in event callbacks, instead, call it once and store its return value in a function.",
+		"body": [
+			"panorama.open(${1:root_panel})"
+		]
+	},
+	"panorama.loadstring": {
+		"prefix": [
+			"panorama.loadstring",
+			"loadstring"
+		],
+		"description": "This function behaves similar to lua's loadstring but executes JS code instead. It compiles the given chunk string of JS and returns a function to call it. Avoid generating JS code on-the-fly, instead return a table of functions, which you can then call in Lua. Arguments can be passed from Lua to JS functions.",
+		"body": [
+			"panorama.loadstring(${1:js_code}, ${2:root_panel})"
+		]
+	}
+}

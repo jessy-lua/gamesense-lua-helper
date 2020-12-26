@@ -1,0 +1,191 @@
+{
+    "AsyncWebRequest": {
+      "prefix": "$.AsyncWebRequest",
+      "body": [
+           "$.AsyncWebRequest( ${1:js_args} )"
+       ],
+      "description": "Make a web request"
+    },
+    "CancelScheduled": {
+      "prefix": "$.CancelScheduled",
+      "body": [
+           "$.CancelScheduled( ${1:js_args} )"
+       ],
+      "description": "Cancelse a scheduled function"
+    },
+    "CreatePanel": {
+      "prefix": "$.CreatePanel",
+      "body": [
+           "$.CreatePanel( ${1:js_args} )"
+       ],
+      "description": "Create a new panel"
+    },
+    "DbgIsReloadingScript": {
+      "prefix": "$.DbgIsReloadingScript",
+      "body": [
+           "$.DbgIsReloadingScript( ${1:js_args} )"
+       ],
+      "description": "Call during JS startup code to check if script is being reloaded"
+    },
+    "DefineEvent": {
+      "prefix": "$.DefineEvent",
+      "body": [
+           "$.DefineEvent( ${1:js_args} )"
+       ],
+      "description": "Define an event"
+    },
+    "DefinePanelEvent": {
+      "prefix": "$.DefinePanelEvent",
+      "body": [
+           "$.DefinePanelEvent( ${1:js_args} )"
+       ],
+      "description": "Define an panel event"
+    },
+    "DispatchEvent": {
+      "prefix": "$.DispatchEvent",
+      "body": [
+           "$.DispatchEvent( ${1:js_args} )"
+       ],
+      "description": "Dispatch an event"
+    },
+    "DispatchEventAsync": {
+      "prefix": "$.DispatchEventAsync",
+      "body": [
+           "$.DispatchEventAsync( ${1:js_args} )"
+       ],
+      "description": "Dispatch an event to occur later"
+    },
+    "Each": {
+      "prefix": "$.Each",
+      "body": [
+           "$.Each( ${1:js_args} )"
+       ],
+      "description": "Call a function on each given item"
+    },
+    "FindChildInContext": {
+      "prefix": "$.FindChildInContext",
+      "body": [
+           "$.FindChildInContext( ${1:js_args} )"
+       ],
+      "description": "Find an element"
+    },
+    "GetContextPanel": {
+      "prefix": "$.GetContextPanel",
+      "body": [
+           "$.GetContextPanel( ${1:js_args} )"
+       ],
+      "description": "Get the current panel context"
+    },
+    "HTMLEscape": {
+      "prefix": "$.HTMLEscape",
+      "body": [
+           "$.HTMLEscape( ${1:js_args} )"
+       ],
+      "description": "$.HTMLEscape(str, truncate=false). Converts str, which must be 2048 utf-8 bytes or shorter, into an HTML-safe version. If truncate=true, too long strings will be truncated instead of throwing an exception"
+    },
+    "Language": {
+      "prefix": "$.Language",
+      "body": [
+           "$.Language( ${1:js_args} )"
+       ],
+      "description": "Get the current language"
+    },
+    "LoadKeyValuesFile": {
+      "prefix": "$.LoadKeyValuesFile",
+      "body": [
+           "$.LoadKeyValuesFile( ${1:js_args} )"
+       ],
+      "description": "Load a named key values file and return as JSO"
+    },
+    "Localize": {
+      "prefix": "$.Localize",
+      "body": [
+           "$.Localize( ${1:js_args} )"
+       ],
+      "description": "Localize a string"
+    },
+    "LocalizeSafe": {
+      "prefix": "$.LocalizeSafe",
+      "body": [
+           "$.LocalizeSafe( ${1:js_args} )"
+       ],
+      "description": "Localize a string, but return empty string if the localization token is not found"
+    },
+    "Msg": {
+      "prefix": "$.Msg",
+      "body": [
+           "$.Msg( ${1:js_args} )"
+       ],
+      "description": "Log a message"
+    },
+    "PlaySoundEvent": {
+      "prefix": "$.PlaySoundEvent",
+      "body": [
+           "$.PlaySoundEvent( ${1:js_args} )"
+       ],
+      "description": "$.PlaySoundEvent(str). Plays the named sound event."
+    },
+    "RegisterEventHandler": {
+      "prefix": "$.RegisterEventHandler",
+      "body": [
+           "$.RegisterEventHandler( ${1:js_args} )"
+       ],
+      "description": "Register an event handler"
+    },
+    "RegisterForUnhandledEvent": {
+      "prefix": "$.RegisterForUnhandledEvent",
+      "body": [
+           "$.RegisterForUnhandledEvent( ${1:js_args} )"
+       ],
+      "description": "Register a handler for an event that is not otherwise handled"
+    },
+    "RegisterKeyBind": {
+      "prefix": "$.RegisterKeyBind",
+      "body": [
+           "$.RegisterKeyBind( ${1:js_args} )"
+       ],
+      "description": "Register a key binding"
+    },
+    "Schedule": {
+      "prefix": "$.Schedule",
+      "body": [
+           "$.Schedule( ${1:js_args} )"
+       ],
+      "description": "Schedule a function to be called later"
+    },
+    "StopSoundEvent": {
+      "prefix": "$.StopSoundEvent",
+      "body": [
+           "$.StopSoundEvent( ${1:js_args} )"
+       ],
+      "description": "$.StopSoundEvent(guid, [fadetime]). Stops the sound event. guid was returned from a previous call to PlaySoundEvent. fadetime is optional."
+    },
+    "UnregisterEventHandler": {
+      "prefix": "$.UnregisterEventHandler",
+      "body": [
+           "$.UnregisterEventHandler( ${1:js_args} )"
+       ],
+      "description": "Remove an event handler"
+    },
+    "UnregisterForUnhandledEvent": {
+      "prefix": "$.UnregisterForUnhandledEvent",
+      "body": [
+           "$.UnregisterForUnhandledEvent( ${1:js_args} )"
+       ],
+      "description": "Remove an unhandled event handler"
+    },
+    "UrlDecode": {
+      "prefix": "$.UrlDecode",
+      "body": [
+           "$.UrlDecode( ${1:js_args} )"
+       ],
+      "description": "$.UrlDecode(str). Decodes str, which must be 2048 utf-8 bytes or shorter, from URL-encoded form."
+    },
+    "UrlEncode": {
+      "prefix": "$.UrlEncode",
+      "body": [
+           "$.UrlEncode( ${1:js_args} )"
+       ],
+      "description": "$.UrlEncode(str). Encodes str, which must be 2048 utf-8 bytes or shorter, into URL-encoded form."
+    }
+}

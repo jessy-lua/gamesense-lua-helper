@@ -1,0 +1,34 @@
+{
+    "name": "gamesense-lua-helper",
+    "displayName": "GameSense LUA helper",
+    "description": "Panorama js identifier and panorama.js + lua code sinppets.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.40.0"
+    },
+    "categories": [
+        "Snippets", "Programming Languages", "Other"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+				"language": "lua",
+				"path": "./snippets/lua_snippets.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/js_snippets.json"
+			}
+        ],
+		"grammars": [
+			{
+				"path": "./syntaxes/panorama.tmGrammar.json",
+				"scopeName": "javascript.injection",
+				"injectTo": ["source.lua"],
+				"embeddedLanguages": {
+					"meta.embedded.multiline.js": "javascript"
+				}
+			}
+		]
+    }
+}

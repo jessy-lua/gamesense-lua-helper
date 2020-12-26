@@ -1,0 +1,32 @@
+{
+    "scopeName": "javascript.injection",
+    "injectionSelector": "L:source.lua",
+    "patterns": [
+        {
+            "begin": "(?<=\\.loadstring[\\(]*)\\s*(\\[(=*)\\[)",
+            "beginCaptures": {
+                "0": {
+                    "name": "string.quoted.other.multiline.lua"
+                },
+                "1": {
+                    "name": "punctuation.definition.string.begin.lua"
+                }
+            },
+            "contentName": "meta.embedded.multiline.js",
+            "end": "(\\]\\2\\])",
+            "endCaptures": {
+                "0": {
+                    "name": "string.quoted.other.multiline.lua"
+                },
+                "1": {
+                    "name": "punctuation.definition.string.end.lua"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.js"
+                }
+            ]
+        }
+    ]
+}
