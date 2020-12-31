@@ -1,4 +1,18 @@
 {
+	"readfile": {
+		"prefix": "readfile",
+		"description": "Read and return data from passed file.",
+		"body": [
+			"readfile(${1:filename})"
+		]
+	},
+	"writefile": {
+		"prefix": "writefile",
+		"description": "Writes a value to the file with name.",
+		"body": [
+			"writefile(${1:filename}, ${2:buffer})"
+		]
+	},
 	"bit.arshift": {
 		"prefix": [
 			"bit.arshift",
@@ -229,6 +243,16 @@
 			"client.find_signature(${1:module_name}, ${2:pattern})"
 		]
 	},
+	"client.get_model_name": {
+		"prefix": [
+			"client.get_model_name",
+			"get_model_name"
+		],
+		"description": "Returns model name, or nil on failure.",
+		"body": [
+			"client.get_model_name(${1:model_index})"
+		]
+	},
 	"client.key_state": {
 		"prefix": [
 			"client.key_state",
@@ -277,6 +301,16 @@
 		"description": "Returns a random integer between minimum and maximum.",
 		"body": [
 			"client.random_int(${1:minimum}, ${2:maximum})"
+		]
+	},
+	"client.register_esp_flag": {
+		"prefix": [
+			"client.register_esp_flag",
+			"register_esp_flag"
+		],
+		"description": "Returns the x, y, z coordinates of the entity. Only works for non-dormant entities, except for players, where it will return the dormant esp origin",
+		"body": [
+			"client.register_esp_flag(${1:flagname}, ${2:r}, ${3:g}, ${4:b}, ${5:callback_function})"
 		]
 	},
 	"client.reload_active_scripts": {
@@ -477,6 +511,16 @@
 		"description": "Returns the name of the entity's class, or nil on failure.",
 		"body": [
 			"entity.get_classname(${1:ent})"
+		]
+	},
+	"entity.get_esp_data": {
+		"prefix": [
+			"entity.get_esp_data",
+			"get_esp_data"
+		],
+		"description": "Returns a table containing alpha, health, and weapon_id, or nil on failure.",
+		"body": [
+			"entity.get_esp_data(${1:ent})"
 		]
 	},
 	"entity.get_game_rules": {
@@ -749,6 +793,26 @@
 			"globals.tickinterval()"
 		]
 	},
+	"json.parse": {
+		"prefix": [
+			"json.parse",
+			"parse"
+		],
+		"description": "Will deserialise any UTF-8 JSON string into a Lua value or table.",
+		"body": [
+			"json.parse(${1:json_text})"
+		]
+	},
+	"json.stringify": {
+		"prefix": [
+			"json.stringify",
+			"stringify"
+		],
+		"description": "Will serialise a Lua value into a string containing the JSON representation.",
+		"body": [
+			"json.stringify(${1:data})"
+		]
+	},
 	"materialsystem.alpha_modulate": {
 		"prefix": [
 			"materialsystem.alpha_modulate",
@@ -887,6 +951,46 @@
 		"description": "Sets the value of the shader param of the material",
 		"body": [
 			"materialsystem.set_shader_param(${1:shader_param}, ${2:value})"
+		]
+	},
+	"panorama.loadstring": {
+		"prefix": [
+			"panorama.loadstring",
+			"loadstring"
+		],
+		"description": "This function behaves similar to lua's loadstring but executes JS code instead. It compiles the given chunk string of JS and returns a function to call it. Avoid generating JS code on-the-fly, instead return a table of functions, which you can then call in Lua. Arguments can be passed from Lua to JS functions.",
+		"body": [
+			"panorama.loadstring(${1:js_code}, ${2:root_panel})"
+		]
+	},
+	"panorama.open": {
+		"prefix": [
+			"panorama.open",
+			"open"
+		],
+		"description": "Returns a JS context table that lets you call vanilla JS and panorama functions. Avoid calling this in event callbacks, instead, call it once and store its return value in a function.",
+		"body": [
+			"panorama.open(${1:root_panel})"
+		]
+	},
+	"plist.get": {
+		"prefix": [
+			"plist.get",
+			"get"
+		],
+		"description": "Get the previously stored by plist.set variable at any entity.",
+		"body": [
+			"plist.get(${1:entindex}, ${2:variable_name})"
+		]
+	},
+	"plist.set": {
+		"prefix": [
+			"plist.set",
+			"set"
+		],
+		"description": "Set the special variable to any entity.",
+		"body": [
+			"plist.set(${1:entindex}, ${2:variable_name}, ${3:value})"
 		]
 	},
 	"renderer.circle": {
@@ -1249,58 +1353,14 @@
 			"ui.set_visible(${1:item}, ${2:visible})"
 		]
 	},
-	"writefile": {
-		"prefix": "writefile",
-		"description": "Writes a value to the file with name.",
-		"body": [
-			"writefile(${1:filename}, ${2:value})"
-		]
-	},
-	"readfile": {
-		"prefix": "readfile",
-		"description": "Read and return data from selected file.",
-		"body": [
-			"readfile(${1:filename})"
-		]
-	},
-	"json.stringify": {
+	"ui.update": {
 		"prefix": [
-			"json.stringify",
-			"stringify"
+			"ui.update",
+			"update"
 		],
-		"description": "Will serialise a Lua value into a string containing the JSON representation.",
+		"description": "Change current values for e.g. in listbox to passed.",
 		"body": [
-			"json.stringify(${1:data})"
-		]
-	},
-	"json.parse": {
-		"prefix": [
-			"json.parse",
-			"parse"
-		],
-		"description": "Will deserialise any UTF-8 JSON string into a Lua value or table.",
-		"body": [
-			"json.parse(${1:json_text})"
-		]
-	},
-	"panorama.open": {
-		"prefix": [
-			"panorama.open",
-			"open"
-		],
-		"description": "Returns a JS context table that lets you call vanilla JS and panorama functions. Avoid calling this in event callbacks, instead, call it once and store its return value in a function.",
-		"body": [
-			"panorama.open(${1:root_panel})"
-		]
-	},
-	"panorama.loadstring": {
-		"prefix": [
-			"panorama.loadstring",
-			"loadstring"
-		],
-		"description": "This function behaves similar to lua's loadstring but executes JS code instead. It compiles the given chunk string of JS and returns a function to call it. Avoid generating JS code on-the-fly, instead return a table of functions, which you can then call in Lua. Arguments can be passed from Lua to JS functions.",
-		"body": [
-			"panorama.loadstring(${1:js_code}, ${2:root_panel})"
+			"ui.update(${1:item}, ${2:...})"
 		]
 	}
 }
